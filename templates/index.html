@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Hello {{ username }}</h1>
+        <h2>Find something LOL</h2>
+        <form action="" method="post">
+            <input type="text" name="title"
+               placeholder="Post title" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <ul>
+            {% for elem in result %}
+                <li>{{elem['attributes']['title']}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
